@@ -1,0 +1,2 @@
+# GBShop
+Geekbrains training project
