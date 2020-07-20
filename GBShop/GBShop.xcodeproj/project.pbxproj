@@ -12,7 +12,7 @@
 		50111ED324C46FC90050DBD9 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED224C46FC90050DBD9 /* ErrorParser.swift */; };
 		50111ED524C46FF00050DBD9 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED424C46FF00050DBD9 /* DataRequest.swift */; };
 		50111ED724C470EF0050DBD9 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED624C470EE0050DBD9 /* RequestRouter.swift */; };
-		50111ED924C479890050DBD9 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED824C479890050DBD9 /* LoginResult.swift */; };
+		50111ED924C479890050DBD9 /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED824C479890050DBD9 /* AuthResult.swift */; };
 		50111EDB24C479A80050DBD9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EDA24C479A80050DBD9 /* User.swift */; };
 		50111EE024C47A050050DBD9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EDF24C47A050050DBD9 /* Auth.swift */; };
 		50111EE224C47A690050DBD9 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EE124C47A690050DBD9 /* RequestFactory.swift */; };
@@ -54,7 +54,7 @@
 		50111ED224C46FC90050DBD9 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		50111ED424C46FF00050DBD9 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		50111ED624C470EE0050DBD9 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
-		50111ED824C479890050DBD9 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		50111ED824C479890050DBD9 /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		50111EDA24C479A80050DBD9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		50111EDF24C47A050050DBD9 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		50111EE124C47A690050DBD9 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				50111EDA24C479A80050DBD9 /* User.swift */,
-				50111ED824C479890050DBD9 /* LoginResult.swift */,
+				50111ED824C479890050DBD9 /* AuthResult.swift */,
 				5037D27724C5506000C706EB /* RegistrationResult.swift */,
 			);
 			path = Entity;
@@ -516,7 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50111ED924C479890050DBD9 /* LoginResult.swift in Sources */,
+				50111ED924C479890050DBD9 /* AuthResult.swift in Sources */,
 				5055BECB24C01E09007F7AA2 /* AppDelegate.swift in Sources */,
 				50111ED724C470EF0050DBD9 /* RequestRouter.swift in Sources */,
 				50111ED324C46FC90050DBD9 /* ErrorParser.swift in Sources */,

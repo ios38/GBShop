@@ -28,20 +28,7 @@ class ViewController: UIViewController {
         
         let requestFactory = RequestFactory()
         
-        self.auth = requestFactory.makeAuthRequestFactory()
-        
-        guard let auth = self.auth else { return }
-        auth.login(userName: "user", password: "password") { response in
-            switch response.result {
-            case .success(let login):
-                print(login)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
         self.registration = requestFactory.makeRegistrationRequestFactory()
-        
         guard let registration = self.registration else { return }
         
         registration.register(userName: "user", password: "password", email: "user@gmail.com") { response in
@@ -53,6 +40,26 @@ class ViewController: UIViewController {
             }
 
         }
+        
+        self.auth = requestFactory.makeAuthRequestFactory()
+        guard let auth = self.auth else { return }
 
+        auth.login(userName: "user", password: "password") { response in
+            switch response.result {
+            case .success(let login):
+                print(login)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        auth.logout(userId: "123") { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

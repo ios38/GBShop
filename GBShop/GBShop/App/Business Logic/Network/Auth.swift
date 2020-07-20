@@ -11,6 +11,7 @@ import Alamofire
 
 protocol AuthRequestFactory {
     func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
+    func logout(userId: String, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
 }
 
 class Auth: AbstractRequestFactory {
@@ -34,6 +35,12 @@ extension Auth: AuthRequestFactory {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
+    func logout(userId: String, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+
 }
 
 extension Auth {
@@ -41,7 +48,6 @@ extension Auth {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "login.json"
-
         
         let login: String
         let password: String
@@ -52,4 +58,18 @@ extension Auth {
             ]
         }
     }
+    
+    struct Logout: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "logout.json"
+        
+        let userId: String
+        var parameters: Parameters? {
+            return [
+                "id_user": userId
+            ]
+        }
+    }
+
 }
