@@ -14,12 +14,13 @@
 		50111ED724C470EF0050DBD9 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED624C470EE0050DBD9 /* RequestRouter.swift */; };
 		50111ED924C479890050DBD9 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111ED824C479890050DBD9 /* LoginResult.swift */; };
 		50111EDB24C479A80050DBD9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EDA24C479A80050DBD9 /* User.swift */; };
-		50111EDE24C479DA0050DBD9 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EDD24C479DA0050DBD9 /* AuthRequestFactory.swift */; };
 		50111EE024C47A050050DBD9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EDF24C47A050050DBD9 /* Auth.swift */; };
 		50111EE224C47A690050DBD9 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EE124C47A690050DBD9 /* RequestFactory.swift */; };
 		50111EE524C47AF70050DBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EE324C47AF70050DBD9 /* ViewController.swift */; };
 		50111EE624C47AF70050DBD9 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EE424C47AF70050DBD9 /* Pet.swift */; };
 		50111EE824C495530050DBD9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50111EE724C495530050DBD9 /* NetworkService.swift */; };
+		5037D27824C5506000C706EB /* RegistrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D27724C5506000C706EB /* RegistrationResult.swift */; };
+		5037D27C24C5515D00C706EB /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D27B24C5515D00C706EB /* Registration.swift */; };
 		5055BECB24C01E09007F7AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055BECA24C01E09007F7AA2 /* AppDelegate.swift */; };
 		5055BECD24C01E09007F7AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055BECC24C01E09007F7AA2 /* SceneDelegate.swift */; };
 		5055BED424C01E0A007F7AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5055BED324C01E0A007F7AA2 /* Assets.xcassets */; };
@@ -55,12 +56,13 @@
 		50111ED624C470EE0050DBD9 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		50111ED824C479890050DBD9 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		50111EDA24C479A80050DBD9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		50111EDD24C479DA0050DBD9 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		50111EDF24C47A050050DBD9 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		50111EE124C47A690050DBD9 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		50111EE324C47AF70050DBD9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50111EE424C47AF70050DBD9 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		50111EE724C495530050DBD9 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5037D27724C5506000C706EB /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResult.swift; sourceTree = "<group>"; };
+		5037D27B24C5515D00C706EB /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		5055BEC724C01E09007F7AA2 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055BECA24C01E09007F7AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5055BECC24C01E09007F7AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				50111EDF24C47A050050DBD9 /* Auth.swift */,
-				50111EDD24C479DA0050DBD9 /* AuthRequestFactory.swift */,
+				5037D27B24C5515D00C706EB /* Registration.swift */,
 				50111EE124C47A690050DBD9 /* RequestFactory.swift */,
 			);
 			path = Network;
@@ -232,8 +234,9 @@
 		5055BEFF24C01F9C007F7AA2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				50111ED824C479890050DBD9 /* LoginResult.swift */,
 				50111EDA24C479A80050DBD9 /* User.swift */,
+				50111ED824C479890050DBD9 /* LoginResult.swift */,
+				5037D27724C5506000C706EB /* RegistrationResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -521,7 +524,8 @@
 				5055BECD24C01E09007F7AA2 /* SceneDelegate.swift in Sources */,
 				50111ED524C46FF00050DBD9 /* DataRequest.swift in Sources */,
 				50111EE224C47A690050DBD9 /* RequestFactory.swift in Sources */,
-				50111EDE24C479DA0050DBD9 /* AuthRequestFactory.swift in Sources */,
+				5037D27C24C5515D00C706EB /* Registration.swift in Sources */,
+				5037D27824C5506000C706EB /* RegistrationResult.swift in Sources */,
 				50111EE624C47AF70050DBD9 /* Pet.swift in Sources */,
 				50111EDB24C479A80050DBD9 /* User.swift in Sources */,
 				50111EE824C495530050DBD9 /* NetworkService.swift in Sources */,
@@ -622,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -676,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

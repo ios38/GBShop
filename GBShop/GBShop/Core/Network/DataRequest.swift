@@ -43,7 +43,7 @@ extension DataRequest {
         
             let responseSerializer = DataResponseSerializer<T> { request, response, data, error in
                 //print(request ?? "")
-                print(error ?? "")
+                //print(error ?? "")
                 if let error = errorParser.parse(response: response, data: data, error: error) {
                     return .failure(error)
                 }

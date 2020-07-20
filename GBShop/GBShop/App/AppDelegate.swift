@@ -14,6 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*
+        let requestFactory = RequestFactory()
+        let auth = requestFactory.makeAuthRequestFactory()
+        
+        auth.login(userName: "user", password: "password") { response in
+            switch response.result {
+            case .success(let login):
+                print(login)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }*/
+
         // Override point for customization after application launch.
         return true
     }
