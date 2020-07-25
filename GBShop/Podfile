@@ -7,7 +7,7 @@ target 'GBShop' do
 
   # Pods for GBShop
   pod 'Swinject', '~> 2.7.1'
-  pod 'Alamofire','4.9.1'
+  pod 'Alamofire'
 
   target 'GBShopTests' do
     inherit! :search_paths

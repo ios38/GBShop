@@ -15,12 +15,11 @@ class RequestFactory {
         return ErrorParser()
     }
     
-    lazy var commonSessionManager: SessionManager = {
+    lazy var commonSession: Session = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
         configuration.timeoutIntervalForRequest = 30
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        let manager = SessionManager(configuration: configuration)
+        let manager = Session(configuration: configuration)
         return manager
     }()
     
@@ -28,12 +27,12 @@ class RequestFactory {
     
     func makeAuthRequestFactory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Auth(errorParser: errorParser, session: commonSession, queue: sessionQueue)
     }
     
     func makeRegistrationRequestFactory() -> RegistrationRequestFactory {
         let errorParser = makeErrorParser()
-        return Registration(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Registration(errorParser: errorParser, session: commonSession, queue: sessionQueue)
     }
 
 }

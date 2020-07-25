@@ -12,21 +12,21 @@ protocol RegistrationRequestFactory {
     func register(userName: String,
                   password: String,
                   email: String,
-                  completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void)
+                  completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void)
 }
 
 class Registration: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
-    let sessionManager: SessionManager
+    let session: Session
     let queue: DispatchQueue?
     let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(
         errorParser: AbstractErrorParser,
-        sessionManager: SessionManager,
+        session: Session,
         queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
-        self.sessionManager = sessionManager
+        self.session = session
         self.queue = queue
     }
 }
@@ -35,7 +35,7 @@ extension Registration: RegistrationRequestFactory {
     func register(userName: String,
                   password: String,
                      email: String,
-         completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void) {
+         completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, login: userName, password: password, email: email)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

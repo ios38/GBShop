@@ -10,10 +10,11 @@ import Foundation
 import Alamofire
 
 class NetworkService {
-    static let manager: SessionManager = {
+    /*
+    static let manager: Session = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 30
-        let manager = SessionManager(configuration: config)
+        let manager = Session(configuration: config)
         return manager
     }()
     
@@ -32,5 +33,5 @@ class NetworkService {
                 print(error)
             }
         }
-    }
+    }*/
 }

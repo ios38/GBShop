@@ -10,33 +10,33 @@ import Foundation
 import Alamofire
 
 protocol AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
-    func logout(userId: String, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
+    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void)
+    func logout(userId: String, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void)
 }
 
 class Auth: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
-    let sessionManager: SessionManager
+    let session: Session
     let queue: DispatchQueue?
     let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(
         errorParser: AbstractErrorParser,
-        sessionManager: SessionManager,
+        session: Session,
         queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser
-        self.sessionManager = sessionManager
+        self.session = session
         self.queue = queue
     }
 }
 
 extension Auth: AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func logout(userId: String, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
+    func logout(userId: String, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
         let requestModel = Logout(baseUrl: baseUrl, userId: userId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
