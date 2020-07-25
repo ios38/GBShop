@@ -27,6 +27,7 @@
 		5055BED724C01E0A007F7AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055BED524C01E0A007F7AA2 /* LaunchScreen.storyboard */; };
 		5055BEE224C01E0A007F7AA2 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055BEE124C01E0A007F7AA2 /* GBShopTests.swift */; };
 		5055BEED24C01E0A007F7AA2 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055BEEC24C01E0A007F7AA2 /* GBShopUITests.swift */; };
+		50F0B02624CC368000FDF4B0 /* PostStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0B02524CC368000FDF4B0 /* PostStub.swift */; };
 		A6B1459B4B66D78C8664D808 /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB903678F5846ACD22C41D7 /* Pods_GBShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		5055BEE824C01E0A007F7AA2 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055BEEC24C01E0A007F7AA2 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		5055BEEE24C01E0A007F7AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50F0B02524CC368000FDF4B0 /* PostStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStub.swift; sourceTree = "<group>"; };
 		B206FA96AEAA644CE96FE3AE /* Pods_GBShop_GBShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop_GBShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FC26DB18E637376FC53003 /* Pods_GBShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB903678F5846ACD22C41D7 /* Pods_GBShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 			children = (
 				5055BECA24C01E09007F7AA2 /* AppDelegate.swift */,
 				5055BECC24C01E09007F7AA2 /* SceneDelegate.swift */,
+				50F0B02524CC368000FDF4B0 /* PostStub.swift */,
 				5055BF0124C01FB8007F7AA2 /* Flows */,
 				5055BF0024C01FAC007F7AA2 /* Assembly */,
 				5055BEFF24C01F9C007F7AA2 /* Entity */,
@@ -524,6 +527,7 @@
 				5055BECD24C01E09007F7AA2 /* SceneDelegate.swift in Sources */,
 				50111ED524C46FF00050DBD9 /* DataRequest.swift in Sources */,
 				50111EE224C47A690050DBD9 /* RequestFactory.swift in Sources */,
+				50F0B02624CC368000FDF4B0 /* PostStub.swift in Sources */,
 				5037D27C24C5515D00C706EB /* Registration.swift in Sources */,
 				5037D27824C5506000C706EB /* RegistrationResult.swift in Sources */,
 				50111EE624C47AF70050DBD9 /* Pet.swift in Sources */,
